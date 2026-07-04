@@ -17,12 +17,13 @@ Generar el `README-solution.md` del proyecto — la documentación que cualquier
 
 ```
 Genera un README.md completo para este proyecto. Debe incluir:
-1. Descripción del sistema
+1. Descripción del sistema (Centro de Monitoreo de Objetos Cercanos a la Tierra)
 2. Tecnologías usadas
 3. Instrucciones de instalación y ejecución
-4. Ejemplos de uso (con los comandos o requests reales)
-5. Descripción de los endpoints o comandos disponibles
-6. Estructura del proyecto
+4. Cómo obtener una API key gratuita de la NASA (https://api.nasa.gov)
+5. Ejemplos de uso con comandos o requests reales
+6. Descripción de las funciones o endpoints disponibles
+7. Estructura del proyecto
 
 Basate en el código que ya existe en el proyecto.
 Guárdalo como README-solution.md en la raíz.
@@ -30,10 +31,9 @@ Guárdalo como README-solution.md en la raíz.
 
 ### Paso 2 — Revisa y ajusta
 
-Lee el README generado. Si falta algo relevante, pide ajustes puntuales:
-
 ```
-Agrega un ejemplo de cómo comparar "pikachu" vs "mewtwo" en la sección de ejemplos.
+Agrega un ejemplo que muestre el asteroide más peligroso 
+identificado en el rango 2025-01-01 a 2025-01-07.
 ```
 
 ---
@@ -42,10 +42,11 @@ Agrega un ejemplo de cómo comparar "pikachu" vs "mewtwo" en la sección de ejem
 
 - [ ] `README-solution.md` generado en la raíz
 - [ ] Instrucciones de instalación correctas
+- [ ] Instrucciones para obtener API key de NASA incluidas
 - [ ] Al menos 2 ejemplos de uso reales
 
 ---
 
 ## 💡 Tip de tokens
 
-Usa modo `Agent` si quieres que Bob lea el código antes de escribir el README (más preciso). Usa modo `Ask` si ya tienes el código claro y puedes describírselo en el prompt (más barato).
+Usa modo `Agent` si quieres que Bob lea el código antes de escribir el README (más preciso). Usa modo `Ask` si ya tienes el código claro y puedes describírselo en el prompt (más barato en tokens).

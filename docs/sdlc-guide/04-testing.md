@@ -7,7 +7,7 @@
 
 ## Objetivo
 
-Generar y ejecutar pruebas unitarias que validen la lógica del sistema.
+Generar y ejecutar pruebas unitarias que validen la lógica del sistema sin depender de la API de la NASA en cada ejecución.
 
 ---
 
@@ -16,12 +16,15 @@ Generar y ejecutar pruebas unitarias que validen la lógica del sistema.
 ### Paso 1 — Pide los tests a Bob
 
 ```
-Genera pruebas unitarias para el módulo de gestión del equipo Pokémon.
+Genera pruebas unitarias para los módulos de lógica del sistema NeoTracker.
+Usa datos mock (no llames a la API real en los tests).
 Cubre estos casos:
-1. Agregar un Pokémon al equipo (caso exitoso)
-2. Intentar agregar un 7mo Pokémon (debe fallar / lanzar error)
-3. Eliminar un Pokémon que existe en el equipo
-4. Comparar dos Pokémon: el que tiene mayor suma de stats debe ganar
+1. Ordenar una lista de asteroides por velocidad relativa (ascendente)
+2. Ordenar una lista de asteroides por tamaño estimado (descendente)
+3. Identificar correctamente el asteroide con menor miss_distance de una lista
+4. Agregar un asteroide a la lista de seguimiento
+5. Intentar agregar un asteroide duplicado a la lista de seguimiento (debe ignorarse o lanzar error)
+6. Eliminar un asteroide que existe en la lista de seguimiento
 
 Usa el framework de testing estándar de [tu lenguaje].
 Guarda los tests en la carpeta tests/.
@@ -35,27 +38,22 @@ Ejecuta las pruebas y muéstrame el resultado.
 
 ### Paso 3 — Corrige si hay fallos
 
-Si algún test falla, pide a Bob que lo analice:
-
 ```
-El test "agregar séptimo Pokémon" falla. Analiza el error y corrige 
-el código fuente o el test según corresponda.
+El test de identificación del más peligroso falla. 
+Analiza el error y corrige el código fuente o el test según corresponda.
 ```
-
-### Paso 4 — Guarda la evidencia
-
-Copia el output de los tests y llena [`docs/evidence-templates/04-testing.md`](../evidence-templates/04-testing.md).
 
 ---
 
 ## ✅ Checklist de salida
 
-- [ ] Al menos 4 tests escritos en `tests/`
-- [ ] Todos los tests pasan (verde)
-- [ ] Screenshot o texto del resultado en `evidence/04-testing.md`
+- [ ] Al menos 6 tests escritos en `tests/`
+- [ ] Todos los tests usan datos mock (sin llamadas reales a la NASA API)
+- [ ] Todos los tests pasan
+- [ ] Output de la ejecución documentado en `evidence/01-sdlc-stages/evidencia.md`
 
 ---
 
 ## 💡 Tip de tokens
 
-Pide todos los tests en **un solo prompt** especificando los casos. Es mucho más eficiente que pedir test por test.
+Pide todos los tests en **un solo prompt** especificando los casos. Es mucho más eficiente que pedir test por test. Incluir datos mock de ejemplo en el prompt mejora la calidad de los tests generados.

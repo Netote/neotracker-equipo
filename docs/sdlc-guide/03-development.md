@@ -27,11 +27,15 @@ Crea la estructura del proyecto con los siguientes módulos:
 [pega aquí la arquitectura que definieron en el diseño]
 
 Requisitos técnicos:
-- Consume la PokéAPI en https://pokeapi.co/api/v2/pokemon/{name}
-- Gestiona un equipo de hasta 6 Pokémon en memoria
-- Implementa: buscar Pokémon, agregar al equipo, eliminar del equipo, comparar dos Pokémon por stats totales
+- Consume la NASA NeoWs API:
+  GET https://api.nasa.gov/neo/rest/v1/feed?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD&api_key=DEMO_KEY
+- Implementa:
+  1. Consultar asteroides por rango de fechas (máx 7 días)
+  2. Listar y ordenar por tamaño estimado o velocidad relativa
+  3. Identificar el asteroide con menor miss_distance del rango (el más peligroso)
+  4. Agregar / eliminar asteroides de una lista de seguimiento en memoria
 - Interfaz: [CLI / REST API / web — la que eligieron]
-- Sin base de datos, sin autenticación
+- Sin base de datos, sin autenticación propia
 
 Crea los archivos necesarios con el código funcional.
 ```
@@ -41,16 +45,16 @@ Crea los archivos necesarios con el código funcional.
 Si algo falta o necesita corrección, sé específico:
 
 ```
-El método de comparación no suma correctamente los stats. 
-Arréglalo: debe sumar todos los valores del array "base_stat" de la PokéAPI.
+El método que identifica el asteroide más peligroso no está 
+comparando correctamente el campo miss_distance.kilometers.
+Corrígelo: debe encontrar el asteroide con el valor numérico más bajo en ese campo.
 ```
 
 ### Paso 4 — Verifica que el código corra
 
-Pide a Bob que lo ejecute:
-
 ```
-Ejecuta el proyecto y muéstrame que funciona con un ejemplo usando "pikachu" y "charizard".
+Ejecuta el proyecto con el rango de fechas 2025-01-01 a 2025-01-07 
+usando api_key=DEMO_KEY y muéstrame el resultado.
 ```
 
 ---
@@ -58,9 +62,10 @@ Ejecuta el proyecto y muéstrame que funciona con un ejemplo usando "pikachu" y 
 ## ✅ Checklist de salida
 
 - [ ] Código fuente en carpeta `src/`
-- [ ] Búsqueda de Pokémon funciona con la PokéAPI real
-- [ ] Agregar / eliminar del equipo funciona
-- [ ] Comparación de stats funciona
+- [ ] Consulta de asteroides por fechas funciona con la API real
+- [ ] Ordenamiento por tamaño o velocidad funciona
+- [ ] Identificación del más peligroso (menor miss_distance) funciona
+- [ ] Lista de seguimiento (agregar/eliminar) funciona
 - [ ] La app corre sin errores
 
 ---
@@ -69,5 +74,5 @@ Ejecuta el proyecto y muéstrame que funciona con un ejemplo usando "pikachu" y 
 
 - **Un prompt grande al inicio** es más eficiente que 10 prompts pequeños.
 - **Incluye el contexto** de diseño en el primer prompt para que Bob no tenga que preguntar.
-- Si Bob se equivoca, **señala exactamente la línea o función** en lugar de pedir reescribir todo.
-- Usa `# Solo modifica esta función:` para ediciones quirúrgicas.
+- Si Bob se equivoca, **señala exactamente la función o campo** en lugar de pedir reescribir todo.
+- Usa `# Solo modifica este método:` para ediciones quirúrgicas.

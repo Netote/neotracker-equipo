@@ -1,32 +1,38 @@
-# 🎮 PokéDev Challenge — SDLC con IBM Bob
+# 🚀 NeoTracker Challenge — SDLC con IBM Bob
 
 > **Equipos de 5 personas · ~60 minutos · Lenguaje libre**
 
 [![IBM Bob](https://img.shields.io/badge/Powered%20by-IBM%20Bob-0f62fe?style=flat-square)](https://bob.ibm.com/docs/ide)
-[![PokéAPI](https://img.shields.io/badge/API-PokéAPI%20v2-ef5350?style=flat-square)](https://pokeapi.co)
+[![NASA API](https://img.shields.io/badge/API-NASA%20NeoWs-0b3d91?style=flat-square)](https://api.nasa.gov)
 [![Lenguaje libre](https://img.shields.io/badge/Lenguaje-El%20que%20elijan-4caf50?style=flat-square)](#)
 
 ---
 
 ## 🧩 El Reto
 
-El **Profesor Oak** necesita un sistema para que los entrenadores Pokémon puedan **armar y gestionar su equipo de batalla**. Tu equipo deberá construirlo en **~60 minutos** usando **IBM Bob como copiloto en cada etapa del SDLC**.
+El **Centro de Monitoreo Planetario** necesita un sistema para rastrear y analizar **objetos cercanos a la Tierra (NEOs)**. Tu equipo deberá construirlo en **~60 minutos** usando **IBM Bob como copiloto en cada etapa del SDLC**.
 
-> ⚡ El objetivo no es solo que el código funcione — es demostrar cómo **Bob participó en cada decisión** del ciclo de vida del desarrollo de software.
+> El objetivo no es solo que el código funcione — es demostrar cómo **Bob participó en cada decisión** del ciclo de vida del desarrollo de software.
 
 ---
 
 ## 📋 Requerimiento Semilla
 
-El sistema debe tener las siguientes capacidades:
+El sistema debe tener las siguientes capacidades, consumiendo la [NASA NeoWs API](https://api.nasa.gov):
 
-1. **Buscar un Pokémon** por nombre y ver su información básica (tipo, habilidades, estadísticas base) consumiendo la [PokéAPI](https://pokeapi.co/docs/v2).
-2. **Armar un equipo** de hasta 6 Pokémon (agregar / eliminar del equipo).
-3. **Comparar dos Pokémon** mostrando cuál tiene mejores stats totales.
-4. El equipo debe **persistir** mientras la aplicación esté corriendo (en memoria es suficiente).
+1. **Consultar asteroides** cercanos a la Tierra en un rango de fechas (máximo 7 días).
+2. **Listar y ordenar** los resultados por tamaño estimado o velocidad relativa.
+3. **Identificar el más peligroso** del rango consultado — el que tenga menor `miss_distance` (distancia de acercamiento a la Tierra).
+4. **Mantener una lista de seguimiento** donde se puedan agregar y eliminar asteroides de interés (en memoria).
 5. La interfaz puede ser CLI, REST API o web simple — **el equipo decide**.
 
-> No se requiere autenticación, base de datos persistente ni UI elaborada.
+> No se requiere autenticación propia, base de datos persistente ni UI elaborada.
+> Usar `api_key=DEMO_KEY` es suficiente para el challenge. Para más llamadas, obtener una key gratuita en [api.nasa.gov](https://api.nasa.gov) toma menos de 2 minutos.
+
+**Endpoint principal:**
+```
+GET https://api.nasa.gov/neo/rest/v1/feed?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD&api_key=DEMO_KEY
+```
 
 ---
 
@@ -49,7 +55,7 @@ Sigue las guías en `docs/sdlc-guide/` en orden.
 ## 📁 Estructura esperada de tu repositorio
 
 ```
-mi-equipo-pokedev/
+mi-equipo-neotracker/
 ├── README-solution.md                        # Documentación generada con Bob
 ├── src/                                      # Código fuente (lenguaje libre)
 │   └── ...
@@ -77,10 +83,10 @@ La rúbrica la maneja el organizador del challenge. Los cinco rubros evaluados c
 ## 🚀 ¿Cómo empezar?
 
 1. **Crea un fork** de este repositorio.
-2. Renombra tu fork como `pokedev-[nombre-equipo]`.
+2. Renombra tu fork como `neotracker-[nombre-equipo]`.
 3. Sigue las guías en `docs/sdlc-guide/` en orden.
 4. Llena los archivos `evidence/*/evidencia.md` con lo que su equipo considere relevante.
-5. Al finalizar, abre un **Pull Request** a este repo con el título `[EQUIPO: nombre] PokéDev Challenge`.
+5. Al finalizar, abre un **Pull Request** a este repo con el título `[EQUIPO: nombre] NeoTracker Challenge`.
 
 ---
 
@@ -88,7 +94,8 @@ La rúbrica la maneja el organizador del challenge. Los cinco rubros evaluados c
 
 | Recurso | Link |
 |---------|------|
-| 🎮 PokéAPI Docs | https://pokeapi.co/docs/v2 |
+| 🛰️ NASA NeoWs API Docs | https://api.nasa.gov |
+| 🔑 Obtener API Key gratuita | https://api.nasa.gov/#signUp |
 | 📖 IBM Bob Docs | https://bob.ibm.com/docs/ide |
 | 🆓 Cómo obtener tu prueba gratuita de Bob (30 días) | https://medium.com/@victor.chequer/how-to-get-a-free-30-day-ibm-bob-trial-step-by-step-guide-5d2cdddea8f0 |
 | 🧩 Modos y Skills de Bob | https://medium.com/@victor.chequer/ibm-bob-modes-vs-skills-the-complete-guide-to-reliable-ai-assisted-development-c5d528ff4fac |
@@ -101,5 +108,5 @@ La rúbrica la maneja el organizador del challenge. Los cinco rubros evaluados c
 - ✅ Pueden usar **cualquier lenguaje de programación**.
 - ✅ Bob **debe participar** en cada etapa (evidencia obligatoria).
 - ✅ Código generado con Bob **debe funcionar** — revísenlo siempre.
-- ❌ No copiar código de fuentes externas que no sea Bob o la PokéAPI.
+- ❌ No copiar código de fuentes externas que no sea Bob o la NASA API.
 - ❌ No copiar evidencias entre equipos.

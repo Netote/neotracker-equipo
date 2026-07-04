@@ -27,20 +27,20 @@ Esta etapa **no tiene un momento fijo** — la estrategia de tokens se aplica de
 
 ❌ Ineficiente:
 ```
-Crea la clase Pokemon
+Crea la función que identifica el asteroide más peligroso
 ```
-*(Bob pregunta qué atributos, luego pide el lenguaje, luego...)*
+*(Bob pregunta qué campo usar, luego el lenguaje, luego la estructura de datos...)*
 
 ✅ Eficiente:
 ```
-En Python, crea la clase Pokemon con atributos: name(str), types(list), 
-abilities(list), base_stats(dict). Incluye __repr__ y un método 
-total_stats() que sume todos los valores de base_stats.
+En Python, crea la función find_most_dangerous(neo_list: list[dict]) -> dict
+que reciba una lista de NEOs y retorne el que tenga el valor numérico 
+más bajo en close_approach_data[0].miss_distance.kilometers.
 ```
 
 ### 3. Da contexto al inicio, no en el camino
 
-En lugar de ir agregando contexto poco a poco, incluye en el **primer prompt** todo lo relevante: lenguaje, arquitectura decidida, lo que ya existe, lo que falta.
+Incluye en el **primer prompt** todo lo relevante: lenguaje, arquitectura decidida, estructura del JSON de la NASA, lo que ya existe, lo que falta.
 
 ### 4. Sé quirúrgico en las correcciones
 
@@ -51,27 +51,17 @@ El código no funciona, rehazlo
 
 ✅ Barato:
 ```
-La función compare_pokemon() en src/team.py retorna siempre el primero. 
-El bug está en la línea donde compara: debe comparar total_stats() de ambos.
+La función find_most_dangerous() en src/analyzer.py siempre retorna el 
+primer elemento. El bug está en la comparación: miss_distance.kilometers 
+viene como string, no como float. Conviértelo antes de comparar.
 ```
 
 ### 5. Usa Skills si repites el mismo patrón
 
-Si notan que le piden a Bob lo mismo varias veces (ej: "genera tests para esta función"), es candidato para una **Skill**. No es obligatorio en este challenge, pero suma puntos en la rúbrica.
-
----
-
-## 📋 Qué documentar en tu evidencia
-
-Llena `evidence/07-tokens.md` al final del challenge respondiendo:
-
-1. ¿Qué modo usaron más? ¿Por qué?
-2. ¿Tuvieron que repetir algún prompt? ¿Qué mejorarían?
-3. ¿Usaron alguna Skill? Descríbela.
-4. ¿Qué estrategia les funcionó mejor para reducir iteraciones con Bob?
+Si notan que le piden a Bob lo mismo varias veces (ej: "genera tests unitarios con datos mock para esta función"), es candidato para una **Skill**. Documéntenlo en `evidence/04-bob-skills/evidencia.md`.
 
 ---
 
 ## ✅ Checklist de salida
 
-- [ ] `evidence/07-tokens.md` completado con reflexión honesta del equipo
+- [ ] `evidence/05-token-strategy/evidencia.md` completado con reflexión del equipo

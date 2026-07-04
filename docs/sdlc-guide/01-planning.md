@@ -33,27 +33,28 @@ Requerimiento:
 
 ### Paso 3 — Refina con Bob
 
-Si algo no queda claro, hazle preguntas de seguimiento a Bob. Ejemplo:
+Si algo no queda claro, hazle preguntas de seguimiento. Ejemplo:
 
 ```
-¿Qué casos borde debo considerar para la comparación de stats?
+¿Qué campos del JSON de la NASA NeoWs API necesito para identificar 
+el asteroide con mayor riesgo de acercamiento?
 ```
 
 ### Paso 4 — Guarda la evidencia
 
-Copia la respuesta de Bob y llena la plantilla [`docs/evidence-templates/01-planning.md`](../evidence-templates/01-planning.md).
+Documenta en `evidence/01-sdlc-stages/evidencia.md` los prompts usados, las historias de usuario y las decisiones del equipo.
 
 ---
 
 ## ✅ Checklist de salida
 
-- [ ] Al menos 3 historias de usuario documentadas
+- [ ] Al menos 4 historias de usuario documentadas
 - [ ] Criterios de aceptación por historia
-- [ ] Entidades identificadas (ej: `Pokemon`, `Team`)
-- [ ] Evidencia guardada en `evidence/01-planning.md`
+- [ ] Entidades identificadas (ej: `NearEarthObject`, `WatchList`)
+- [ ] Evidencia guardada
 
 ---
 
 ## 💡 Tip de tokens
 
-En modo `Plan`, Bob no ejecuta herramientas — solo razona. Es el modo más barato en tokens. Aprovéchalo para toda la discusión conceptual antes de tocar código.
+En modo `Plan`, Bob no ejecuta herramientas — solo razona. Es el modo más eficiente en tokens. Aprovéchalo para toda la discusión conceptual antes de tocar código.

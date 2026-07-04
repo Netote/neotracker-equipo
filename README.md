@@ -76,7 +76,15 @@ mi-equipo-neotracker/
 
 ## 🏆 Rúbrica de Evaluación
 
-La rúbrica la maneja el organizador del challenge. Los cinco rubros evaluados corresponden directamente a las carpetas de `evidence/`.
+La rúbrica la maneja el organizador del challenge. Los cinco rubros evaluados son:
+
+| # | Rubro | Carpeta de evidencia |
+|---|-------|----------------------|
+| 1 | Cobertura del SDLC — pasar por todas las etapas | `evidence/01-sdlc-stages/` |
+| 2 | Evidencia del uso de Bob — prompts, calidad, decisiones técnicas | `evidence/02-bob-usage/` |
+| 3 | Uso de Modos de Bob — Plan, Ask, Agent y justificación | `evidence/03-bob-modes/` |
+| 4 | Skills de Bob — identificación, creación y aplicación | `evidence/04-bob-skills/` |
+| 5 | Estrategia de Tokens — reflexión y técnicas para reducir iteraciones | `evidence/05-token-strategy/` |
 
 ---
 

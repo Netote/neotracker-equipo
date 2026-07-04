@@ -1,7 +1,7 @@
 # 🚀 NeoTracker Challenge — SDLC con IBM Bob
 
 ![Luna y Tierra desde el espacio — NASA](images/art002e009285~large.jpg)
-*Al borde de dos mundos — la Tierra en fase creciente asomándose detrás de la Luna, capturada por la tripulación de Artemis II durante su sobrevuelo lunar. El mismo tipo de objetos que rastrearás en este challenge se acercan peligrosamente a este planeta. Imagen: NASA (art002e009285)*
+*Al borde de dos mundos — la Tierra en fase creciente asomándose detrás de la Luna, capturada por la tripulación de Artemis II durante su sobrevuelo lunar. El mismo tipo de objetos que rastrearás en este challenge se acercan peligrosamente a este planeta. Imagen: [NASA (art002e009285)](https://www.nasa.gov/image-detail/amf-art002e009285/)*
 
 > **Equipos de 5 personas · ~60 minutos · Lenguaje libre**
 

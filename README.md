@@ -1,7 +1,7 @@
 # 🚀 NeoTracker Challenge — SDLC con IBM Bob
 
-![Asteroide Eros — NASA/NEAR Shoemaker](https://images-assets.nasa.gov/image/PIA17836/PIA17836~large.jpg)
-*Asteroide 433 Eros fotografiado por la sonda NEAR Shoemaker de la NASA — el primer asteroide near-Earth estudiado en órbita y el tipo de objeto que rastrearás en este challenge. Imagen: NASA/JPL*
+![Luna y Tierra desde el espacio — NASA](images/art002e009285~large.jpg)
+*Vista de la Tierra en creciente asomándose detrás de la Luna — el planeta que los objetos near-Earth (NEOs) se acercan peligrosamente. Imagen: NASA*
 
 > **Equipos de 5 personas · ~60 minutos · Lenguaje libre**
 
